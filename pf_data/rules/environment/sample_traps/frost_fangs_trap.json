@@ -1,0 +1,14 @@
+{
+    "reset": "none", 
+    "perception": "DC 25", 
+    "name": "Frost Fangs Trap", 
+    "url": "pfsrd://Core Rulebook/Rules/Environment/Sample Traps/Frost Fangs Trap", 
+    "trigger": "location", 
+    "effect": "jets of freezing water (3d6 cold damage, DC 20 Reflex save for half damage); multiple targets (all targets in a 40-ft.-square chamber)", 
+    "trap_type": "mechanical", 
+    "source": "Core Rulebook", 
+    "disable_device": "DC 20", 
+    "duration": "3 rounds", 
+    "cr": "7", 
+    "type": "trap"
+}

@@ -1,0 +1,10 @@
+{
+    "body": "<p id=\"spell-like-abilities\" id=\"sp\">Spell-like abilities function just like spells, but are granted through a special racial ability or by a specific class ability (as opposed to spells, which are gained by spellcasting classes as a character gains levels).</p>", 
+    "name": "Spell-Like Abilities", 
+    "url": "pfsrd://Core Rulebook/Rules/Getting Started/Common Terms/Spell-Like Abilities", 
+    "ability_types": {
+        "ability_type": "Spell-Like"
+    }, 
+    "source": "Core Rulebook", 
+    "type": "ability"
+}

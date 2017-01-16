@@ -1,0 +1,7 @@
+{
+    "body": "<p id=\"penalty\">Penalties are numerical values that are subtracted from a check or statistical score. Penalties do not have a type and most penalties stack with one another.</p>", 
+    "url": "pfsrd://Core Rulebook/Rules/Getting Started/Common Terms/Penalty", 
+    "type": "section", 
+    "name": "Penalty", 
+    "source": "Core Rulebook"
+}

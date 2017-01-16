@@ -1,0 +1,10 @@
+{
+    "body": "<p id=\"supernatural-abilities\">Supernatural abilities are magical attacks, defenses, and qualities. These abilities can be always active or they can require a specific action to utilize. The supernatural ability's description includes information on how it is used and its effects.</p>", 
+    "name": "Supernatural Abilities", 
+    "url": "pfsrd://Core Rulebook/Rules/Getting Started/Common Terms/Supernatural Abilities", 
+    "ability_types": {
+        "ability_type": "Supernatural"
+    }, 
+    "source": "Core Rulebook", 
+    "type": "ability"
+}

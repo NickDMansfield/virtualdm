@@ -1,0 +1,14 @@
+{
+    "body": "<p>This metal hook is little more than a stiff, bent needle.</p>", 
+    "name": "Fishhook", 
+    "weight": "&mdash;", 
+    "url": "pfsrd://Core Rulebook/Rules/Equipment/Goods And Services/Adventuring Gear/Fishhook", 
+    "price": "1 sp", 
+    "misc": {
+        "null": {
+            "Gear Type": "Adventuring Gear"
+        }
+    }, 
+    "source": "Core Rulebook", 
+    "type": "item"
+}

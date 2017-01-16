@@ -1,0 +1,14 @@
+{
+    "body": "<p>This needle allows you to stitch together cloth, canvas, or thin leather.</p>", 
+    "name": "Sewing Needle", 
+    "weight": "&mdash;", 
+    "url": "pfsrd://Core Rulebook/Rules/Equipment/Goods And Services/Adventuring Gear/Sewing Needle", 
+    "price": "5 sp", 
+    "misc": {
+        "null": {
+            "Gear Type": "Adventuring Gear"
+        }
+    }, 
+    "source": "Core Rulebook", 
+    "type": "item"
+}

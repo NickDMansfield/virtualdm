@@ -1,0 +1,14 @@
+{
+    "body": "<p>If a miner's pick is used in combat, treat it as a two-handed improvised weapon that deals piercing damage equal to that of a heavy pick of its size. </p>", 
+    "name": "Pick, Miner's", 
+    "weight": "10 lbs.", 
+    "url": "pfsrd://Core Rulebook/Rules/Equipment/Goods And Services/Adventuring Gear/Pick/Miners", 
+    "price": "3 gp", 
+    "misc": {
+        "null": {
+            "Gear Type": "Adventuring Gear"
+        }
+    }, 
+    "source": "Core Rulebook", 
+    "type": "item"
+}

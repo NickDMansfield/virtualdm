@@ -1,0 +1,24 @@
+{
+    "name": "Improved Channel", 
+    "url": "pfsrd://Core Rulebook/Feats/Improved Channel", 
+    "sections": [
+        {
+            "source": "Core Rulebook", 
+            "type": "section", 
+            "name": "Prerequisites", 
+            "description": " Channel energy class feature."
+        }, 
+        {
+            "body": "<p class=\"stat-block-1\"> Add 2 to the DC of saving throws made to resist the effects of your channel energy ability. </p>", 
+            "source": "Core Rulebook", 
+            "type": "section", 
+            "name": "Benefits"
+        }
+    ], 
+    "source": "Core Rulebook", 
+    "feat_types": {
+        "feat_type": "General"
+    }, 
+    "type": "feat", 
+    "description": "Your channeled energy is harder to resist."
+}

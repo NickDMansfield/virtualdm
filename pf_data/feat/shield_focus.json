@@ -1,0 +1,24 @@
+{
+    "name": "Shield Focus", 
+    "url": "pfsrd://Core Rulebook/Feats/Shield Focus", 
+    "sections": [
+        {
+            "source": "Core Rulebook", 
+            "type": "section", 
+            "name": "Prerequisites", 
+            "description": " Shield Proficiency, base attack bonus +1."
+        }, 
+        {
+            "body": "<p class=\"stat-block-1\"> Increase the AC bonus granted by any shield you are using by 1.</p>", 
+            "source": "Core Rulebook", 
+            "type": "section", 
+            "name": "Benefits"
+        }
+    ], 
+    "source": "Core Rulebook", 
+    "feat_types": {
+        "feat_type": "Combat"
+    }, 
+    "type": "feat", 
+    "description": "You are skilled at deflecting blows with your shield."
+}

@@ -1,0 +1,13 @@
+{
+    "reset": "none", 
+    "perception": "DC 31", 
+    "name": "Harm Trap", 
+    "url": "pfsrd://Core Rulebook/Rules/Environment/Sample Traps/Harm Trap", 
+    "trigger": "touch", 
+    "effect": "spell effect (harm, +6 melee touch, 130 damage, DC 19 Will save for half, cannot be reduced to less than 1 hit point)", 
+    "trap_type": "magic", 
+    "source": "Core Rulebook", 
+    "disable_device": "DC 31", 
+    "cr": "14", 
+    "type": "trap"
+}

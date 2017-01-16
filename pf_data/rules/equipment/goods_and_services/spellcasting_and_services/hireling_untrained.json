@@ -1,0 +1,13 @@
+{
+    "body": "<p>The amount shown is the typical daily wage for laborers, maids, and other menial workers.</p>", 
+    "name": "Hireling, Untrained", 
+    "url": "pfsrd://Core Rulebook/Rules/Equipment/Goods And Services/Spellcasting and Services/Hireling/Untrained", 
+    "price": "1 sp per day", 
+    "misc": {
+        "null": {
+            "Gear Type": "Spellcasting and Services"
+        }
+    }, 
+    "source": "Core Rulebook", 
+    "type": "item"
+}

@@ -1,0 +1,36 @@
+{
+    "name": "Armor Proficiency, Heavy", 
+    "url": "pfsrd://Core Rulebook/Feats/Armor Proficiency/Heavy", 
+    "sections": [
+        {
+            "source": "Core Rulebook", 
+            "type": "section", 
+            "name": "Prerequisites", 
+            "description": " Light Armor Proficiency, Medium Armor Proficiency."
+        }, 
+        {
+            "body": "<p class=\"stat-block-1\"> See Armor Proficiency, Light.</p>", 
+            "source": "Core Rulebook", 
+            "type": "section", 
+            "name": "Benefits"
+        }, 
+        {
+            "body": "<p class=\"stat-block-1\"> See Armor Proficiency, Light.</p>", 
+            "source": "Core Rulebook", 
+            "type": "section", 
+            "name": "Normal"
+        }, 
+        {
+            "body": "<p class=\"stat-block-1\"> Fighters and paladins automatically have Heavy Armor Proficiency as a bonus feat. They need not select it.</p>", 
+            "source": "Core Rulebook", 
+            "type": "section", 
+            "name": "Special"
+        }
+    ], 
+    "source": "Core Rulebook", 
+    "feat_types": {
+        "feat_type": "Combat"
+    }, 
+    "type": "feat", 
+    "description": "You are skilled at wearing heavy armor."
+}

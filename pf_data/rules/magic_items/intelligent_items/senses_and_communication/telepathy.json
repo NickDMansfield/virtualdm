@@ -1,0 +1,10 @@
+{
+    "body": "<p>Telepathy allows an intelligent item to communicate with its wielder telepathically, regardless of its known languages. The wielder must be touching the item to communicate in this way.</p>", 
+    "name": "Telepathy", 
+    "url": "pfsrd://Core Rulebook/Rules/Magic Items/Intelligent Items/Senses and Communication/Telepathy", 
+    "ability_types": {
+        "ability_type": "Supernatural"
+    }, 
+    "source": "Core Rulebook", 
+    "type": "ability"
+}

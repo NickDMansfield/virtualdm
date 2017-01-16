@@ -1,0 +1,7 @@
+{
+    "body": "<p>When you multiply damage more than once, each multiplier works off the original, unmultiplied damage. So if you are asked to double the damage twice, the end result is three times the normal damage.</p>", 
+    "url": "pfsrd://Core Rulebook/Rules/Combat/Combat Statistics/Damage/Multiplying Damage/Note", 
+    "type": "section", 
+    "name": "Note", 
+    "source": "Core Rulebook"
+}

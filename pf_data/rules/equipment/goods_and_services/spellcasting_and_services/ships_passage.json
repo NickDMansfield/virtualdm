@@ -1,0 +1,13 @@
+{
+    "body": "<p>Most ships do not specialize in passengers, but many have the capability to take a few along when transporting cargo. Double the given cost for creatures larger than Medium or creatures that are otherwise difficult to bring aboard a ship.</p>", 
+    "name": "Ship's Passage", 
+    "url": "pfsrd://Core Rulebook/Rules/Equipment/Goods And Services/Spellcasting and Services/Ships Passage", 
+    "price": "1 sp per mile", 
+    "misc": {
+        "null": {
+            "Gear Type": "Spellcasting and Services"
+        }
+    }, 
+    "source": "Core Rulebook", 
+    "type": "item"
+}

@@ -1,0 +1,13 @@
+{
+    "name": "Red Ache", 
+    "source": "Core Rulebook", 
+    "url": "pfsrd://Core Rulebook/Rules/Glossary/Special Abilities/Diseases/Red Ache", 
+    "contracted": "injury", 
+    "effect": "1d6 Str damage", 
+    "onset": "1d3 days", 
+    "subtype": "disease", 
+    "cure": "2 consecutive saves", 
+    "frequency": "1/day", 
+    "save": "Fortitude DC 15", 
+    "type": "affliction"
+}

@@ -1,0 +1,20 @@
+{
+    "slot": "armor", 
+    "name": "Dragonhide Plate", 
+    "weight": "50 lbs.", 
+    "cl": "&mdash", 
+    "url": "pfsrd://Core Rulebook/Rules/Magic Items/Armor/Specific Armors/Dragonhide Plate", 
+    "type": "item", 
+    "price": "3,300 gp", 
+    "subtype": "armor", 
+    "aura": "no aura (nonmagical)", 
+    "sections": [
+        {
+            "body": "<p>This suit of full plate is made of dragonhide, rather than metal, so druids can wear it. It is otherwise identical to masterwork full plate. </p>", 
+            "source": "Core Rulebook", 
+            "type": "section", 
+            "name": "DESCRIPTION"
+        }
+    ], 
+    "source": "Core Rulebook"
+}

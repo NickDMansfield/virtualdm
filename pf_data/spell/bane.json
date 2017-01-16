@@ -1,0 +1,69 @@
+{
+    "body": "<p><i>Bane</i> fills your enemies with fear and doubt. Each affected creature takes a &ndash;1 penalty on attack rolls and a &ndash;1 penalty on saving throws against fear effects. <i>Bane</i> counters and dispels <i>bless</i>.</p>", 
+    "school": "enchantment", 
+    "saving_throw": "Will negates", 
+    "description": "Enemies take -1 on attack rolls and saves vs. fear.", 
+    "source": "Core Rulebook", 
+    "url": "pfsrd://Core Rulebook/Spells/Bane", 
+    "spell_resistance": "yes", 
+    "casting_time": "1 standard action", 
+    "level_text": "Antipaladin: 1; Cleric: 1; Inquisitor: 1; Oracle: 1; Shaman: 1; Warpriest: 1", 
+    "descriptor": [
+        "emotion", 
+        "fear", 
+        "mind-affecting"
+    ], 
+    "range": "50 ft.", 
+    "levels": [
+        {
+            "class": "Antipaladin", 
+            "level": 1
+        }, 
+        {
+            "class": "Cleric", 
+            "level": 1
+        }, 
+        {
+            "class": "Inquisitor", 
+            "level": 1
+        }, 
+        {
+            "class": "Oracle", 
+            "level": 1
+        }, 
+        {
+            "class": "Shaman", 
+            "level": 1
+        }, 
+        {
+            "class": "Warpriest", 
+            "level": 1
+        }
+    ], 
+    "descriptor_text": "emotion, fear, mind-affecting", 
+    "effects": [
+        {
+            "text": "50-ft.-radius burst, centered on you", 
+            "name": "Area"
+        }
+    ], 
+    "components": [
+        {
+            "type": "V"
+        }, 
+        {
+            "type": "S"
+        }, 
+        {
+            "type": "DF"
+        }
+    ], 
+    "duration": "1 min./level", 
+    "subschool_text": "compulsion", 
+    "subschool": [
+        "compulsion"
+    ], 
+    "type": "spell", 
+    "component_text": "V, S, DF", 
+    "name": "Bane"
+}

@@ -1,0 +1,14 @@
+{
+    "body": "<p>This simple 10-foot ladder consists of two long boards with wooden steps nailed into them at 1-foot increments.</p>", 
+    "name": "Ladder", 
+    "weight": "20 lbs.", 
+    "url": "pfsrd://Core Rulebook/Rules/Equipment/Goods And Services/Adventuring Gear/Ladder", 
+    "price": "2 sp", 
+    "misc": {
+        "null": {
+            "Gear Type": "Adventuring Gear"
+        }
+    }, 
+    "source": "Core Rulebook", 
+    "type": "item"
+}

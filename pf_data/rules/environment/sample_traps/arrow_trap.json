@@ -1,0 +1,13 @@
+{
+    "reset": "none", 
+    "perception": "DC 20", 
+    "name": "Arrow Trap", 
+    "url": "pfsrd://Core Rulebook/Rules/Environment/Sample Traps/Arrow Trap", 
+    "trigger": "touch", 
+    "effect": "Atk +15 ranged (1d8+1/&times;3)", 
+    "trap_type": "mechanical", 
+    "source": "Core Rulebook", 
+    "disable_device": "DC 20", 
+    "cr": "1", 
+    "type": "trap"
+}

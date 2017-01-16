@@ -1,0 +1,9 @@
+{
+    "body": "<p>Dwarves are both tough and wise, but also a bit gruff.</p>", 
+    "name": "Attributes", 
+    "source": "Core Rulebook", 
+    "url": "pfsrd://Core Rulebook/Races/Dwarves/Dwarf Racial Traits/Attributes", 
+    "subtype": "dwarves", 
+    "type": "racial_trait", 
+    "description": "+2 Constitution, +2 Wisdom, -2 Charisma"
+}

@@ -1,0 +1,24 @@
+{
+    "name": "Improved Great Fortitude", 
+    "url": "pfsrd://Core Rulebook/Feats/Improved Great Fortitude", 
+    "sections": [
+        {
+            "source": "Core Rulebook", 
+            "type": "section", 
+            "name": "Prerequisites", 
+            "description": " Great Fortitude."
+        }, 
+        {
+            "body": "<p class=\"stat-block-1\"> Once per day, you may reroll a Fortitude save. You must decide to use this ability before the results are revealed. You must take the second roll, even if it is worse.</p>", 
+            "source": "Core Rulebook", 
+            "type": "section", 
+            "name": "Benefits"
+        }
+    ], 
+    "source": "Core Rulebook", 
+    "feat_types": {
+        "feat_type": "General"
+    }, 
+    "type": "feat", 
+    "description": "You can draw upon an inner reserve to resist diseases, poisons, and other grievous harm."
+}

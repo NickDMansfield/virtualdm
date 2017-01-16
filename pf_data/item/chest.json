@@ -1,0 +1,14 @@
+{
+    "body": "<p>A common small wooden chest (2 cubic feet, 1 hit point, break DC 17). Most include a simple inset lock. </p>", 
+    "name": "Chest", 
+    "weight": "25 lbs.", 
+    "url": "pfsrd://Core Rulebook/Rules/Equipment/Goods And Services/Adventuring Gear/Chest", 
+    "price": "2 gp", 
+    "misc": {
+        "null": {
+            "Gear Type": "Adventuring Gear"
+        }
+    }, 
+    "source": "Core Rulebook", 
+    "type": "item"
+}

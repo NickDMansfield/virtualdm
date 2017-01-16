@@ -1,0 +1,10 @@
+{
+    "body": "<p>An intelligent item with the capability for speech can talk using any of the languages it knows.</p>", 
+    "name": "Speech", 
+    "url": "pfsrd://Core Rulebook/Rules/Magic Items/Intelligent Items/Senses and Communication/Speech", 
+    "ability_types": {
+        "ability_type": "Supernatural"
+    }, 
+    "source": "Core Rulebook", 
+    "type": "ability"
+}

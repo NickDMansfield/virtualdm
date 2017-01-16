@@ -1,0 +1,63 @@
+{
+    "body": "<p>You bring special favor upon yourself and your allies while bringing disfavor to your enemies. You and each of your allies gain a +1 luck bonus on attack rolls, weapon damage rolls, saves, and skill checks, while each of your foes takes a &ndash;1 penalty on such rolls.</p>", 
+    "school": "enchantment", 
+    "saving_throw": "none", 
+    "description": "Allies get +1 bonus on most rolls, enemies -1 penalty.", 
+    "source": "Core Rulebook", 
+    "url": "pfsrd://Core Rulebook/Spells/Prayer", 
+    "spell_resistance": "yes", 
+    "casting_time": "1 standard action", 
+    "level_text": "Cleric: 3; Inquisitor: 3; Oracle: 3; Paladin: 3; Warpriest: 3", 
+    "descriptor": [
+        "mind-affecting"
+    ], 
+    "range": "40 ft.", 
+    "levels": [
+        {
+            "class": "Cleric", 
+            "level": 3
+        }, 
+        {
+            "class": "Inquisitor", 
+            "level": 3
+        }, 
+        {
+            "class": "Oracle", 
+            "level": 3
+        }, 
+        {
+            "class": "Paladin", 
+            "level": 3
+        }, 
+        {
+            "class": "Warpriest", 
+            "level": 3
+        }
+    ], 
+    "descriptor_text": "mind-affecting", 
+    "effects": [
+        {
+            "text": "all allies and foes within a 40-ft.-radius burst centered on you", 
+            "name": "Area"
+        }
+    ], 
+    "components": [
+        {
+            "type": "V"
+        }, 
+        {
+            "type": "S"
+        }, 
+        {
+            "type": "DF"
+        }
+    ], 
+    "duration": "1 round/level", 
+    "subschool_text": "compulsion", 
+    "subschool": [
+        "compulsion"
+    ], 
+    "type": "spell", 
+    "component_text": "V, S, DF", 
+    "name": "Prayer"
+}

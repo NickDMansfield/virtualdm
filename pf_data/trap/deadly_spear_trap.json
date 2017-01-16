@@ -1,0 +1,13 @@
+{
+    "reset": "manual", 
+    "perception": "DC 30", 
+    "name": "Deadly Spear Trap", 
+    "url": "pfsrd://Core Rulebook/Rules/Environment/Sample Traps/Deadly Spear Trap", 
+    "trigger": "sight (true seeing)", 
+    "effect": "Atk +20 ranged (1d8+6 plus black lotus extract)", 
+    "trap_type": "mechanical", 
+    "source": "Core Rulebook", 
+    "disable_device": "DC 30", 
+    "cr": "18", 
+    "type": "trap"
+}

@@ -1,0 +1,8 @@
+{
+    "body": "<p>Dwarves have a base speed of 20 feet, but their speed is never modified by armor or encumbrance.</p>", 
+    "name": "Slow and Steady", 
+    "source": "Core Rulebook", 
+    "url": "pfsrd://Core Rulebook/Races/Dwarves/Dwarf Racial Traits/Slow and Steady", 
+    "subtype": "dwarves", 
+    "type": "racial_trait"
+}

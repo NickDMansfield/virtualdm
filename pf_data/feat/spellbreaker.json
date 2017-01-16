@@ -1,0 +1,30 @@
+{
+    "name": "Spellbreaker", 
+    "url": "pfsrd://Core Rulebook/Feats/Spellbreaker", 
+    "sections": [
+        {
+            "source": "Core Rulebook", 
+            "type": "section", 
+            "name": "Prerequisites", 
+            "description": " Disruptive, 10th-level fighter."
+        }, 
+        {
+            "body": "<p class=\"stat-block-1\"> Enemies in your threatened area that fail their checks to cast spells defensively provoke attacks of opportunity from you.</p>", 
+            "source": "Core Rulebook", 
+            "type": "section", 
+            "name": "Benefits"
+        }, 
+        {
+            "body": "<p class=\"stat-block-1\"> Enemies that fail to cast spells defensively do not provoke attacks of opportunity.</p>", 
+            "source": "Core Rulebook", 
+            "type": "section", 
+            "name": "Normal"
+        }
+    ], 
+    "source": "Core Rulebook", 
+    "feat_types": {
+        "feat_type": "Combat"
+    }, 
+    "type": "feat", 
+    "description": "You can strike at enemy spellcasters who fail to cast defensively when you threaten them."
+}

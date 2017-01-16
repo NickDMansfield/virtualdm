@@ -1,0 +1,36 @@
+{
+    "name": "Armor Proficiency, Medium", 
+    "url": "pfsrd://Core Rulebook/Feats/Armor Proficiency/Medium", 
+    "sections": [
+        {
+            "source": "Core Rulebook", 
+            "type": "section", 
+            "name": "Prerequisites", 
+            "description": " Light Armor Proficiency."
+        }, 
+        {
+            "body": "<p class=\"stat-block-1\"> See Armor Proficiency, Light.</p>", 
+            "source": "Core Rulebook", 
+            "type": "section", 
+            "name": "Benefits"
+        }, 
+        {
+            "body": "<p class=\"stat-block-1\"> See Armor Proficiency, Light.</p>", 
+            "source": "Core Rulebook", 
+            "type": "section", 
+            "name": "Normal"
+        }, 
+        {
+            "body": "<p class=\"stat-block-1\"> Barbarians, clerics, druids, fighters, paladins, and rangers automatically have Medium Armor Proficiency as a bonus feat. They need not select it.</p>", 
+            "source": "Core Rulebook", 
+            "type": "section", 
+            "name": "Special"
+        }
+    ], 
+    "source": "Core Rulebook", 
+    "feat_types": {
+        "feat_type": "Combat"
+    }, 
+    "type": "feat", 
+    "description": "You are skilled at wearing medium armor."
+}

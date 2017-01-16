@@ -1,0 +1,48 @@
+{
+    "url": "pfsrd://Core Rulebook/Rules/Combat/Movement/Position/And Distance/Tactical Movement", 
+    "type": "section", 
+    "sections": [
+        {
+            "body": "<table id=\"table-8-3-tactical-speed\"><caption>Table: Tactical Speed</caption><thead><tr><th>Race</th><th>No Armor or Light Armor</th><th>Medium or Heavy Armor</th></tr></thead><tbody><tr class=\"odd\"><td>Human, elf, half-elf, half-orc</td><td>30 ft. (6 squares)</td><td>20 ft. (4 squares)</td></tr><tr class=\"even\"><td>Dwarf</td><td>20 ft. (4 squares)</td><td>20 ft. (4 squares)</td></tr><tr class=\"odd\"><td>Halfling, gnome</td><td>20 ft. (4 squares)</td><td>15 ft. (3 squares)</td></tr></tbody></table>", 
+            "url": "pfsrd://Core Rulebook/Rules/Combat/Movement/Position/And Distance/Tactical Movement/Table Tactical Speed", 
+            "type": "table", 
+            "name": "Table: Tactical Speed", 
+            "source": "Core Rulebook"
+        }, 
+        {
+            "body": "<p>Your speed is determined by your race and your armor (see Table: Tactical Speed). Your speed while unarmored is your base land speed.</p>", 
+            "source": "Core Rulebook", 
+            "type": "section"
+        }, 
+        {
+            "body": "<p>A character encumbered by carrying treasure, a large amount of gear, or fallen comrades may move slower than normal (see Additional Rules).</p>", 
+            "url": "pfsrd://Core Rulebook/Rules/Combat/Movement/Position/And Distance/Tactical Movement/Encumbrance", 
+            "type": "section", 
+            "name": "Encumbrance", 
+            "source": "Core Rulebook"
+        }, 
+        {
+            "body": "<p>Difficult terrain, obstacles, or poor visibility can hamper movement.</p>", 
+            "url": "pfsrd://Core Rulebook/Rules/Combat/Movement/Position/And Distance/Tactical Movement/Hampered Movement", 
+            "type": "section", 
+            "name": "Hampered Movement", 
+            "source": "Core Rulebook"
+        }, 
+        {
+            "body": "<p>Generally, you can move your speed in a round and still do something (take a move action and a standard action).</p><p>If you do nothing but move (that is, if you use both of your actions in a round to move your speed), you can move double your speed.</p><p>If you spend the entire round running, you can move quadruple your speed (or three times your speed in heavy armor). If you do something that requires a full round, you can only take a 5-foot step.</p>", 
+            "url": "pfsrd://Core Rulebook/Rules/Combat/Movement/Position/And Distance/Tactical Movement/Movement in Combat", 
+            "type": "section", 
+            "name": "Movement in Combat", 
+            "source": "Core Rulebook"
+        }, 
+        {
+            "body": "<p>A barbarian has a +10-foot bonus to his speed (unless she's wearing heavy armor). Experienced monks also have higher speed (unless they're wearing armor of any sort). In addition, many spells and magic items can affect a character's speed. Always apply any modifiers to a character's speed before adjusting the character's speed based on armor or encumbrance, and remember that multiple bonuses of the same type to a character's speed don't stack.</p>", 
+            "url": "pfsrd://Core Rulebook/Rules/Combat/Movement/Position/And Distance/Tactical Movement/Bonuses to Speed", 
+            "type": "section", 
+            "name": "Bonuses to Speed", 
+            "source": "Core Rulebook"
+        }
+    ], 
+    "name": "Tactical Movement", 
+    "source": "Core Rulebook"
+}

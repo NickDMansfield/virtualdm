@@ -1,0 +1,10 @@
+{
+    "body": "<p id=\"extraordinary-abilities\" id=\"ex\">Extraordinary abilities are unusual abilities that do not rely on magic to function.</p>", 
+    "name": "Extraordinary Abilities", 
+    "url": "pfsrd://Core Rulebook/Rules/Getting Started/Common Terms/Extraordinary Abilities", 
+    "ability_types": {
+        "ability_type": "Extraordinary"
+    }, 
+    "source": "Core Rulebook", 
+    "type": "ability"
+}

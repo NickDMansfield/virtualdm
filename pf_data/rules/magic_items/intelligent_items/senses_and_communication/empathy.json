@@ -1,0 +1,10 @@
+{
+    "body": "<p>Empathy allows the item to encourage or discourage certain actions by communicating emotions and urges. It does not allow for verbal communication.</p>", 
+    "name": "Empathy", 
+    "url": "pfsrd://Core Rulebook/Rules/Magic Items/Intelligent Items/Senses and Communication/Empathy", 
+    "ability_types": {
+        "ability_type": "Supernatural"
+    }, 
+    "source": "Core Rulebook", 
+    "type": "ability"
+}

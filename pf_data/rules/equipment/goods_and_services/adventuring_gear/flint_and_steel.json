@@ -1,0 +1,14 @@
+{
+    "body": "<p>Lighting a torch with flint and steel is a full-round action, and lighting any other fire with them takes at least that long.</p>", 
+    "name": "Flint and Steel", 
+    "weight": "&mdash;", 
+    "url": "pfsrd://Core Rulebook/Rules/Equipment/Goods And Services/Adventuring Gear/Flint and Steel", 
+    "price": "1 gp", 
+    "misc": {
+        "null": {
+            "Gear Type": "Adventuring Gear"
+        }
+    }, 
+    "source": "Core Rulebook", 
+    "type": "item"
+}

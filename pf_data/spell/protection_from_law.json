@@ -1,0 +1,64 @@
+{
+    "body": "<p>This spell functions like <i>protection from evil</i>, except that the deflection and resistance bonuses apply to attacks made by lawful creatures. The target receives a new saving throw against control by lawful creatures and lawful summoned creatures cannot touch the target.</p>", 
+    "school": "abjuration", 
+    "description": "+2 to AC and saves, plus additional protection against selected alignments.", 
+    "source": "Core Rulebook", 
+    "url": "pfsrd://Core Rulebook/Spells/Protection From Law", 
+    "level_text": "Adept: 1; Antipaladin: 1; Arcanist: 1; Bloodrager: 1; Cleric: 1; Inquisitor: 1; Oracle: 1; Shaman: 1; Sorcerer: 1; Summoner: 1; Warpriest: 1; Wizard: 1", 
+    "descriptor": [
+        "chaotic"
+    ], 
+    "levels": [
+        {
+            "class": "Adept", 
+            "level": 1
+        }, 
+        {
+            "class": "Antipaladin", 
+            "level": 1
+        }, 
+        {
+            "class": "Arcanist", 
+            "level": 1
+        }, 
+        {
+            "class": "Bloodrager", 
+            "level": 1
+        }, 
+        {
+            "class": "Cleric", 
+            "level": 1
+        }, 
+        {
+            "class": "Inquisitor", 
+            "level": 1
+        }, 
+        {
+            "class": "Oracle", 
+            "level": 1
+        }, 
+        {
+            "class": "Shaman", 
+            "level": 1
+        }, 
+        {
+            "class": "Sorcerer", 
+            "level": 1
+        }, 
+        {
+            "class": "Summoner", 
+            "level": 1
+        }, 
+        {
+            "class": "Warpriest", 
+            "level": 1
+        }, 
+        {
+            "class": "Wizard", 
+            "level": 1
+        }
+    ], 
+    "descriptor_text": "chaotic", 
+    "type": "spell", 
+    "name": "Protection From Law"
+}
