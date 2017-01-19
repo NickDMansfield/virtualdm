@@ -105,6 +105,7 @@
         {
           "range": "touch",
           "magical": true,
+          "duration": 1,
           "damage": [
             {
               "target": "target",

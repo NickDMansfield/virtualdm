@@ -107,6 +107,43 @@ const placeRooms = (() => {
     placementsValid = validateRoomPlacement(allRooms);
   }
 });
+const getDistanceBetweenPoints = ((p1, p2) => {
+  return Math.sqrt((p2.x-p1.x) * (p2.x-p1.x) + (p2.y-p1.y) * (p2.y-p1.y));
+});
+
+const getRoomById = (id => {
+  _.find(allRooms, { id })
+});
+
+const getClosestRoomByCorners = (room => {
+  const cornersArr = getAbsoluteCornerCoords(room);
+  const pairing = { distance: null, startRoom: room.id, endRoom: null };
+  for (let roomIndex = 0; roomIndex < allRooms.length; ++roomIndex) {
+    const roomConnections = [];
+    const evalRoom = allRooms[roomIndex];
+    if (room.id !== evalRoom.id) {
+      const evalCorners = getAbsoluteCornerCoords(evalRoom);
+      cornersArr.map(curCorner => {
+        evalCorners.map(evalCorner => {
+          const cornerDistance = getDistanceBetweenPoints(curCorner, evalCorner);
+          if (cornerDistance < pairing.distance || !pairing.distance) {
+            pairing.distance = cornerDistance;
+            pairing.endRoom = evalRoom.id;
+          }
+        });
+      });
+    }
+  }
+  return pairing;
+});
+
+const pairRooms = (rooms => {
+  //NOTE this determintes which rooms should connect to one another
+  const matches = _.map(rooms, room => {
+    return getClosestRoomByCorners(room);
+  });
+  console.log(JSON.stringify(matches, null, 2));
+});
 
 const drawDungeon = (() => {
   const imgMapArr = [];
@@ -125,7 +162,7 @@ const drawDungeon = (() => {
   }
   allRooms.map(room => {
     room.tiles.map(tile => {
-      imgMapArr[tile.x + room.x][tile.y + room.y] = 'R'
+      imgMapArr[tile.x + room.x][tile.y + room.y] = room.id.toString().charAt(room.id.toString().length-1);
     })
   });
 
@@ -142,6 +179,7 @@ const buildDungeon = (_configData => {
   // For the example, we will use 4 rooms
   allRooms = buildRooms(configData.roomCount || 20, 3, maxRoomWidth, 3, maxRoomHeight);
   placeRooms();
+  pairRooms(allRooms);
 //  console.log(JSON.stringify(allRooms));
   drawDungeon();
 });
