@@ -7,10 +7,12 @@ let dungeonLevel = 1;
 let tileTypes = [];
 let allRooms = [];
 const adjacencyPercentage = 0.5;
-const dungeonWidth = 90;
-const dungeonHeight = 130;
-const maxRoomWidth = 20;
-const maxRoomHeight = 20;
+const dungeonWidth = 50;
+const dungeonHeight = 40;
+const maxRoomWidth = 8;
+const maxRoomHeight = 8;
+const minRoomWidth = 4;
+const minRoomHeight = 4;
 
 const generateSetting = (() => {
   const dungeonTypes = ["lair", "death-trap", "mine"];
@@ -90,6 +92,7 @@ const validateRoomPlacement = (roomArr => {
     });
   });
   const uniqueTiles = _.uniq(tilesArr);
+  console.log(`There were ${ tilesArr.length - uniqueTiles.length} overlaps`);
   return tilesArr.length === uniqueTiles.length;
 });
 
@@ -150,9 +153,9 @@ const drawDungeon = (() => {
   let widestRoom = 0;
   let tallestRoom = 0;
 
-  const adjustedWidth = dungeonWidth + maxRoomWidth;
-  const adjustedHeight = dungeonHeight + maxRoomHeight;
-  console.log(`AW: ${adjustedWidth} AH: ${adjustedHeight}`);
+  // These are switched like this to account for the rotation when converting to a dual array
+  const adjustedHeight = dungeonWidth + maxRoomWidth;
+  const adjustedWidth = dungeonHeight + maxRoomHeight;
   for (let xx = 0; xx <= adjustedWidth; ++xx) {
     const col = [];
     for (let yy = 0; yy <= adjustedHeight; ++yy) {
@@ -162,7 +165,7 @@ const drawDungeon = (() => {
   }
   allRooms.map(room => {
     room.tiles.map(tile => {
-      imgMapArr[tile.x + room.x][tile.y + room.y] = room.id.toString().charAt(room.id.toString().length-1);
+      imgMapArr[tile.y + room.y][tile.x + room.x] = room.id.toString().charAt(room.id.toString().length-1);
     })
   });
 
@@ -177,7 +180,7 @@ const buildDungeon = (_configData => {
 
   generateSetting();
   // For the example, we will use 4 rooms
-  allRooms = buildRooms(configData.roomCount || 20, 3, maxRoomWidth, 3, maxRoomHeight);
+  allRooms = buildRooms(configData.roomCount || 20, minRoomWidth, maxRoomWidth, minRoomHeight, maxRoomHeight);
   placeRooms();
   pairRooms(allRooms);
 //  console.log(JSON.stringify(allRooms));
