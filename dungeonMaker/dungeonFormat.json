@@ -1,0 +1,131 @@
+{
+  "rooms": [
+    {
+      "id":1,
+      "description": "The room is smelly",
+      "x": 0,
+      "y": 0,
+      "tiles":[
+        { "x": 0, "y": 0, "texture": "stone" },
+        { "x": 1, "y": 0, "texture": "stone" },
+        { "x": 2, "y": 0, "texture": "stone" },
+        { "x": 0, "y": 1, "texture": "stone" },
+        { "x": 1, "y": 1, "texture": "stone" },
+        { "x": 2, "y": 1, "texture": "stone" },
+        { "x": 0, "y": 2, "texture": "stone" },
+        { "x": 1, "y": 2, "texture": "stone" },
+        { "x": 2, "y": 2, "texture": "stone" }
+      ],
+      "exits": [
+        {
+          "x": 1,
+          "y": -1,
+          "connectingRoom": 0,
+          "barriers": [1,2]
+        },
+        {
+          "x": 1,
+          "y": 2,
+          "connectingRoom": 2,
+          "barriers": []
+        }
+      ],
+      "occuppants": [
+        {
+          "name": "Smee",
+          "race": "goblin",
+          "stats": {
+            "hp": 6,
+            "strength": 8,
+            "agility": 12,
+            "intellect": 6
+          },
+          "equipped": {
+            "weapons": [
+              {
+                "type": "weapon",
+                "name": "cheap dagger",
+                "effects": [],
+                "damage": [
+                  {
+                    "types": ["piercing", "melee"],
+                    "target": "target",
+                    "amount": {
+                      "die": 1,
+                      "sides": 4,
+                      "bonus": 0
+                    }
+                  }
+                ],
+                "value":  {
+                  "platinum": 0,
+                  "gold": 0,
+                  "silver": 1,
+                  "copper": 0
+                }
+              }
+            ]
+          },
+          "inventory": {
+            "items": [],
+            "wealth": {
+              "platinum": 0,
+              "gold": 0,
+              "silver": 0,
+              "copper": 3
+            }
+          }
+        }
+      ],
+      "aesthetics": []
+    }
+  ],
+  "barriers": [
+    {
+      "id": 1,
+      "width": 1,
+      "height": 0,
+      "type": "door",
+      "magical": false,
+      "description": "a plain wooden door",
+      "hardness": 10,
+      "durability": 20,
+      "locked": true,
+      "requires": ["silver key"]
+    },
+    {
+      "id": 2,
+      "width": 1,
+      "height": 0,
+      "type": "barrier",
+      "magical": true,
+      "description": "a shimmering green field",
+      "locked": true,
+      "effects": [
+        {
+          "range": "touch",
+          "magical": true,
+          "damage": [
+            {
+              "target": "target",
+              "types": ["electric"],
+              "amount": [
+                {
+                  "die": 1,
+                  "sides": 6,
+                  "bonus": 0
+                },
+                {
+                  "die": 0,
+                  "sides": 0,
+                  "bonus": 1
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+
+}
