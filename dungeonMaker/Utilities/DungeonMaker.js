@@ -7,12 +7,12 @@ let dungeonLevel = 1;
 let tileTypes = [];
 let allRooms = [];
 const adjacencyPercentage = 0.5;
-const dungeonWidth = 40;
-const dungeonHeight = 40;
-const maxRoomWidth = 8;
-const maxRoomHeight = 8;
-const minRoomWidth = 4;
-const minRoomHeight = 4;
+const dungeonWidth = 15;
+const dungeonHeight = 15;
+const maxRoomWidth = 6;
+const maxRoomHeight = 6;
+const minRoomWidth = 2;
+const minRoomHeight = 2;
 
 const generateSetting = (() => {
   const dungeonTypes = ["lair", "death-trap", "mine"];
@@ -118,20 +118,27 @@ const getRoomById = (id => {
   _.find(allRooms, { id })
 });
 
-const getClosestRoomByCorners = (room => {
-  const cornersArr = getAbsoluteCornerCoords(room);
-  const pairing = { distance: null, startRoom: room.id, endRoom: null };
+const getClosestRoom = ((room, gatheringMethod, measureMethod) => {
+  //gatheringMethod should be a method which returns an array of tile objects
+  //measuremethod Requires a method which generates a number from two tile objects
+  const tilesArr = gatheringMethod(room);
+  const pairing = { startRoom: room.id, startTile: null, endRoom: null, endTile: null, distance: null };
   for (let roomIndex = 0; roomIndex < allRooms.length; ++roomIndex) {
     const roomConnections = [];
     const evalRoom = allRooms[roomIndex];
     if (room.id !== evalRoom.id) {
-      const evalCorners = getAbsoluteCornerCoords(evalRoom);
-      cornersArr.map(curCorner => {
-        evalCorners.map(evalCorner => {
-          const cornerDistance = getDistanceBetweenPoints(curCorner, evalCorner);
-          if (cornerDistance < pairing.distance || !pairing.distance) {
-            pairing.distance = cornerDistance;
+      const evalTiles = gatheringMethod(evalRoom);
+      tilesArr.map(curTile => {
+        evalTiles.map(evalTile => {
+          const measureValue = measureMethod(curTile, evalTile);
+          console.log(`CTILE: ${JSON.stringify(curTile)}`);
+          console.log(`eTILE: ${JSON.stringify(evalTile)}`);
+          console.log(`MV: ${measureValue}`);
+          if (measureValue < pairing.distance || !pairing.distance) {
+            pairing.distance = measureValue;
             pairing.endRoom = evalRoom.id;
+            pairing.startTile = curTile;
+            pairing.endTile = evalTile;
           }
         });
       });
@@ -140,12 +147,32 @@ const getClosestRoomByCorners = (room => {
   return pairing;
 });
 
-const pairRooms = (rooms => {
+const getMiddleCoords = ((room, _absolute) => {
+  // Returns the coordinates for the top, right, bottom, and left middle blocks.  Used for door placement
+  const absolute = _absolute || true;
+  const xMod = absolute ? room.x : 0;
+  const yMod = absolute ? room.y : 0;
+  const lastTile = room.tiles[room.tiles.length - 1];
+  const midY = Math.ceil(lastTile.y / 2);
+  const midX = Math.ceil(lastTile.x / 2);
+  // [T, R, B, L]
+  return [
+    { x: midX + xMod, y: 0 + xMod},
+    { x: lastTile.x + xMod, y: midY + yMod},
+    { x: midX + xMod, y: lastTile.y + xMod},
+    { x: 0 + xMod, y: midY +xMod}
+  ];
+});
+const getCorridorLength = ((startPoint, endPoint, smartPathing) => {
+  //If smartpathing is false, the corridor will just move in a straight line and bend 90 degrees
+  return (Math.abs(endPoint.x - startPoint.x) + Math.abs(endPoint.y - startPoint.y));
+});
+
+const getRoomPairs = (rooms => {
   //NOTE this determintes which rooms should connect to one another
-  const matches = _.map(rooms, room => {
-    return getClosestRoomByCorners(room);
+  return _.map(rooms, room => {
+    return getClosestRoom(room, getMiddleCoords, getCorridorLength);
   });
-  console.log(JSON.stringify(matches, null, 2));
 });
 
 const drawDungeon = (() => {
@@ -159,13 +186,13 @@ const drawDungeon = (() => {
   for (let xx = 0; xx <= adjustedWidth; ++xx) {
     const col = [];
     for (let yy = 0; yy <= adjustedHeight; ++yy) {
-      col.push(` `);
+      col.push(' ');
     }
     imgMapArr.push(col);
   }
   allRooms.map(room => {
-    room.tiles.map(tile => {
-      imgMapArr[tile.y + room.y][tile.x + room.x] = room.id.toString().charAt(room.id.toString().length-1);
+    room.tiles.map((tile, i) => {
+      imgMapArr[tile.y + room.y][tile.x + room.x] = i === 0 ? room.id : 'R';
     })
   });
 
@@ -174,14 +201,31 @@ const drawDungeon = (() => {
   })
 });
 
+const getAbsPointDiff = ((tile1, tile2) => {
+  return {
+    x: Math.abs(tile2.x - tile1.x),
+    y: Math.abs(tile2.y - tile1.y)
+  };
+});
+
+const createCorridor = ((tile1, tile2, smartPathing) => {
+  //TODO This should just generate an array and pass it to a room factory at some point
+  const room = {
+    x: tile1.x,
+    y: tile1.y,
+    tiles: []
+  };
+});
+
 const buildDungeon = (_configData => {
 
   const configData = _configData || {};
 
   generateSetting();
-  allRooms = buildRooms(configData.roomCount || 12, minRoomWidth, maxRoomWidth, minRoomHeight, maxRoomHeight);
+  allRooms = buildRooms(configData.roomCount || 5, minRoomWidth, maxRoomWidth, minRoomHeight, maxRoomHeight);
   placeRooms();
-  pairRooms(allRooms);
+  let roomPairs = getRoomPairs(allRooms);
+  console.log(roomPairs);
 //  console.log(JSON.stringify(allRooms));
   drawDungeon();
 });
