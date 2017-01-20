@@ -7,7 +7,7 @@ let dungeonLevel = 1;
 let tileTypes = [];
 let allRooms = [];
 const adjacencyPercentage = 0.5;
-const dungeonWidth = 50;
+const dungeonWidth = 40;
 const dungeonHeight = 40;
 const maxRoomWidth = 8;
 const maxRoomHeight = 8;
@@ -159,7 +159,7 @@ const drawDungeon = (() => {
   for (let xx = 0; xx <= adjustedWidth; ++xx) {
     const col = [];
     for (let yy = 0; yy <= adjustedHeight; ++yy) {
-      col.push(`-`);
+      col.push(` `);
     }
     imgMapArr.push(col);
   }
@@ -170,7 +170,7 @@ const drawDungeon = (() => {
   });
 
   imgMapArr.map(row => {
-    console.log(row.join(""));
+    console.log(row.join(" "));
   })
 });
 
@@ -179,8 +179,7 @@ const buildDungeon = (_configData => {
   const configData = _configData || {};
 
   generateSetting();
-  // For the example, we will use 4 rooms
-  allRooms = buildRooms(configData.roomCount || 20, minRoomWidth, maxRoomWidth, minRoomHeight, maxRoomHeight);
+  allRooms = buildRooms(configData.roomCount || 12, minRoomWidth, maxRoomWidth, minRoomHeight, maxRoomHeight);
   placeRooms();
   pairRooms(allRooms);
 //  console.log(JSON.stringify(allRooms));
