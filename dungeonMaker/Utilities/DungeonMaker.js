@@ -1,6 +1,8 @@
 'use strict';
 
 const _ = require(`lodash`);
+const roomEngine = require(`./roomEngine`);
+const mapTools = require(`./mapTools`);
 
 let dungeonType = null;
 let dungeonLevel = 1;
@@ -30,52 +32,11 @@ const buildRooms = ((roomCount, minWidth, maxWidth, minHeight, maxHeight) => {
     const roomWidth = _.random(minWidth, maxWidth);
     const roomHeight = _.random(minHeight, maxHeight);
     const id = allRooms.length + rooms.length;
-    const tiles = [];
-
-    for (let x = 0; x < roomWidth; ++x) {
-      for ( let y = 0; y < roomHeight; ++y) {
-        tiles.push({ x, y, texture: tileTypes[0]});
-      }
-    }
+    const tiles = roomEngine.getTileSet(roomWidth, roomHeight);
     rooms.push ({id, tiles});
   }
   return rooms.length > 1 ? rooms : rooms[0];
 });
-
-const getLocalCorners = (room => {
-  // returns TL->TR->BL->BR
-  const lastTile = room.tiles[room.tiles.length-1];
-  return [room.tiles[0], { x: lastTile.x, y: 0 }, { x: 0, y: lastTile.y }, lastTile];
-});
-
-const convertLocalCornersToAbsolute = ((room, cornersArr) => {
-  const retArr = [];
-  for (let zz = 0; zz < cornersArr.length; ++zz) {
-    retArr.push({ x: cornersArr[zz].x + room.x, y: cornersArr[zz].y + room.y});
-  }
-  return retArr;
-});
-
-const getAbsoluteCornerCoords = ( room => {
-  return convertLocalCornersToAbsolute(room, getLocalCorners(room));
-});
-
-const convertLocalCoordToAbsolute = ((room, coordObj) => {
-  // Local coordinate refers to the coordinate within the room
-  return { x: coordObj.x + room.x, y: coordObj.y + room.y};
-});
-
-const getBounds = ( room => {
-  const absCorners = getAbsoluteCornerCoords(room);
-  const bounds = {
-    minX: _.min(absCorners, function(c) { return c.x;}),
-    minY: _.min(absCorners, function(c) { return c.y;}),
-    maxX: _.max(absCorners, function(c) { return c.x;}),
-    maxY: _.max(absCorners, function(c) { return c.y;})
-  };
-  return bounds;
-});
-
 const isPointInBounds = ((bounds, point) => {
   return point.x >= bounds.minX && point.x <= bounds.maxX && point.y >= bounds.minY && point.y <= bounds.maxY;
 });
@@ -88,7 +49,7 @@ const validateRoomPlacement = (roomArr => {
   let tilesArr = [];
   roomArr.map(room => {
     room.tiles.map(tile => {
-      tilesArr.push(convertLocalCoordToAbsolute(room, tile).x.toString() + ',' + convertLocalCoordToAbsolute(room, tile).y.toString());
+      tilesArr.push(mapTools.convertLocalCoordToAbsolute(room, tile).x.toString() + ',' + mapTools.convertLocalCoordToAbsolute(room, tile).y.toString());
     });
   });
   const uniqueTiles = _.uniq(tilesArr);
@@ -109,9 +70,6 @@ const placeRooms = (() => {
     }
     placementsValid = validateRoomPlacement(allRooms);
   }
-});
-const getDistanceBetweenPoints = ((p1, p2) => {
-  return Math.sqrt((p2.x-p1.x) * (p2.x-p1.x) + (p2.y-p1.y) * (p2.y-p1.y));
 });
 
 const getRoomById = (id => {
@@ -135,7 +93,7 @@ const getClosestRoom = ((room, gatheringMethod, measureMethod) => {
           console.log(`eTILE: ${JSON.stringify(evalTile)}`);
           console.log(`MV: ${measureValue}`);
           if (measureValue < pairing.distance || !pairing.distance) {
-            pairing.distance = measureValue;
+            pairing.distance = measureValue || pairing.distance;
             pairing.endRoom = evalRoom.id;
             pairing.startTile = curTile;
             pairing.endTile = evalTile;
@@ -163,15 +121,11 @@ const getMiddleCoords = ((room, _absolute) => {
     { x: 0 + xMod, y: midY +xMod}
   ];
 });
-const getCorridorLength = ((startPoint, endPoint, smartPathing) => {
-  //If smartpathing is false, the corridor will just move in a straight line and bend 90 degrees
-  return (Math.abs(endPoint.x - startPoint.x) + Math.abs(endPoint.y - startPoint.y));
-});
 
 const getRoomPairs = (rooms => {
   //NOTE this determintes which rooms should connect to one another
   return _.map(rooms, room => {
-    return getClosestRoom(room, getMiddleCoords, getCorridorLength);
+    return getClosestRoom(room, getMiddleCoords, mapTools.getCorridorLength);
   });
 });
 
@@ -197,7 +151,7 @@ const drawDungeon = (() => {
   });
 
   imgMapArr.map(row => {
-    console.log(row.join(" "));
+    console.log(row.join("-"));
   })
 });
 
