@@ -9,8 +9,8 @@ let dungeonLevel = 1;
 let tileTypes = [];
 let allRooms = [];
 const adjacencyPercentage = 0.5;
-const dungeonWidth = 15;
-const dungeonHeight = 15;
+const dungeonWidth = 30;
+const dungeonHeight = 30;
 const maxRoomWidth = 6;
 const maxRoomHeight = 6;
 const minRoomWidth = 2;
@@ -87,12 +87,15 @@ const getClosestRoom = ((room, gatheringMethod, measureMethod) => {
     if (room.id !== evalRoom.id) {
       const evalTiles = gatheringMethod(evalRoom);
       tilesArr.map(curTile => {
+        const moddedCurTile = _.clone(curTile);
+        moddedCurTile.x += room.x;
+        moddedCurTile.y += room.y;
         evalTiles.map(evalTile => {
-          const measureValue = measureMethod(curTile, evalTile);
-          console.log(`CTILE: ${JSON.stringify(curTile)}`);
-          console.log(`eTILE: ${JSON.stringify(evalTile)}`);
-          console.log(`MV: ${measureValue}`);
-          if (measureValue < pairing.distance || !pairing.distance) {
+          const moddedEvalTile = _.clone(evalTile);
+          moddedEvalTile.x += evalRoom.x;
+          moddedEvalTile.y += evalRoom.y;
+          const measureValue = measureMethod(moddedCurTile, moddedEvalTile);
+          if ( (moddedCurTile !== moddedEvalTile) && measureValue < pairing.distance || !pairing.distance) {
             pairing.distance = measureValue || pairing.distance;
             pairing.endRoom = evalRoom.id;
             pairing.startTile = curTile;
@@ -125,7 +128,7 @@ const getMiddleCoords = ((room, _absolute) => {
 const getRoomPairs = (rooms => {
   //NOTE this determintes which rooms should connect to one another
   return _.map(rooms, room => {
-    return getClosestRoom(room, getMiddleCoords, mapTools.getCorridorLength);
+    return getClosestRoom(room, getMiddleCoords, mapTools.getDistanceBetweenPoints);
   });
 });
 
@@ -176,7 +179,7 @@ const buildDungeon = (_configData => {
   const configData = _configData || {};
 
   generateSetting();
-  allRooms = buildRooms(configData.roomCount || 5, minRoomWidth, maxRoomWidth, minRoomHeight, maxRoomHeight);
+  allRooms = buildRooms(configData.roomCount || 10, minRoomWidth, maxRoomWidth, minRoomHeight, maxRoomHeight);
   placeRooms();
   let roomPairs = getRoomPairs(allRooms);
   console.log(roomPairs);
